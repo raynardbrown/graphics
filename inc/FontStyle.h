@@ -20,7 +20,7 @@ struct FontStyle
     /**
      * The font style flags
      */
-    enum FontStyle
+    enum Value
     {
       DefaultStyle = 0,
       ItalicStyle = 1,
