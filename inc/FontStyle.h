@@ -32,4 +32,8 @@ struct FontStyle
       UnderlineStyle = 4
     };
 };
+
+FontStyle::Value operator|(FontStyle::Value a, FontStyle::Value b);
+FontStyle::Value& operator|=(FontStyle::Value& a, FontStyle::Value b);
+FontStyle::Value operator&(FontStyle::Value a, FontStyle::Value b);
 #endif /* FONTSTYLE_H_ */
