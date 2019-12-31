@@ -15,8 +15,8 @@
 
 #include <string>
 
-#include "FontWeight.h"
-#include "FontStyle.h"
+#include "graphics/FontWeight.h"
+#include "graphics/FontStyle.h"
 
 class FontContext;
 
