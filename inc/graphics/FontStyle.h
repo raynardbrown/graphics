@@ -10,8 +10,8 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#ifndef FONTSTYLE_H_
-#define FONTSTYLE_H_
+#ifndef GRAPHICS_FONTSTYLE_H_
+#define GRAPHICS_FONTSTYLE_H_
 
 struct FontStyle
 {
@@ -36,4 +36,4 @@ struct FontStyle
 FontStyle::Value operator|(FontStyle::Value a, FontStyle::Value b);
 FontStyle::Value& operator|=(FontStyle::Value& a, FontStyle::Value b);
 FontStyle::Value operator&(FontStyle::Value a, FontStyle::Value b);
-#endif /* FONTSTYLE_H_ */
+#endif /* GRAPHICS_FONTSTYLE_H_ */
