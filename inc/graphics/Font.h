@@ -10,8 +10,8 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#ifndef FONT_H_
-#define FONT_H_
+#ifndef GRAPHICS_FONT_H_
+#define GRAPHICS_FONT_H_
 
 #include <string>
 
@@ -55,4 +55,4 @@ class Font
 
     virtual FontContext * getContext() const = 0;
 };
-#endif /* FONT_H_ */
+#endif /* GRAPHICS_FONT_H_ */
