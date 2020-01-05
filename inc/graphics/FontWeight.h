@@ -10,8 +10,8 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#ifndef FONTWEIGHT_H_
-#define FONTWEIGHT_H_
+#ifndef GRAPHICS_FONTWEIGHT_H_
+#define GRAPHICS_FONTWEIGHT_H_
 
 /**
  * The weight of a font in pixels.
@@ -34,4 +34,4 @@ struct FontWeight
       DefaultWeight
     };
 };
-#endif /* FONTWEIGHT_H_ */
+#endif /* GRAPHICS_FONTWEIGHT_H_ */
