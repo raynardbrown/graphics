@@ -10,8 +10,8 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#ifndef FONTFACTORY_H_
-#define FONTFACTORY_H_
+#ifndef GRAPHICS_FONTFACTORY_H_
+#define GRAPHICS_FONTFACTORY_H_
 
 #include <memory>
 
@@ -67,4 +67,4 @@ class FontFactory
 
     std::auto_ptr<FontFactoryPrivate> d;
 };
-#endif /* FONTFACTORY_H_ */
+#endif /* GRAPHICS_FONTFACTORY_H_ */
