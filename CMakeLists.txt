@@ -14,7 +14,8 @@ list(APPEND Headers ${CMAKE_CURRENT_SOURCE_DIR}/inc)
 list(APPEND Headers ${CMAKE_CURRENT_SOURCE_DIR}/src)
 list(APPEND Headers ${Boost_INCLUDE_DIRS})
 
-set(Sources src/graphics/Font.cpp)
+set(Sources src/graphics/Font.cpp
+            src/graphics/Point2D.cpp)
 
 if (MSVC)
     add_compile_options(-Zi
