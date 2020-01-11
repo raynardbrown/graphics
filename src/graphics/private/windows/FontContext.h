@@ -10,8 +10,8 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#ifndef FONTCONTEXT_H_
-#define FONTCONTEXT_H_
+#ifndef GRAPHICS_PRIVATE_WINDOWS_FONTCONTEXT_H_
+#define GRAPHICS_PRIVATE_WINDOWS_FONTCONTEXT_H_
 
 #include <windows.h>
 
@@ -24,4 +24,4 @@ class FontContext
 
     HFONT handle;
 };
-#endif /* FONTCONTEXT_H_ */
+#endif /* GRAPHICS_PRIVATE_WINDOWS_FONTCONTEXT_H_ */
