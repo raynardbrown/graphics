@@ -10,8 +10,8 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#ifndef WINDOWSFONT_H_
-#define WINDOWSFONT_H_
+#ifndef GRAPHICS_PRIVATE_WINDOWS_WINDOWSFONT_H_
+#define GRAPHICS_PRIVATE_WINDOWS_WINDOWSFONT_H_
 
 #include <memory>
 #include <string>
@@ -80,4 +80,4 @@ class WindowsFont : public Font
 
     std::auto_ptr<WindowsFontPrivate> d;
 };
-#endif /* WINDOWSFONT_H_ */
+#endif /* GRAPHICS_PRIVATE_WINDOWS_WINDOWSFONT_H_ */
