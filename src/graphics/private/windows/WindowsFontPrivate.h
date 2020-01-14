@@ -10,8 +10,8 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#ifndef WINDOWSFONTPRIVATE_H_
-#define WINDOWSFONTPRIVATE_H_
+#ifndef GRAPHICS_PRIVATE_WINDOWS_WINDOWSFONTPRIVATE_H_
+#define GRAPHICS_PRIVATE_WINDOWS_WINDOWSFONTPRIVATE_H_
 
 #include <string>
 
@@ -43,4 +43,4 @@ class WindowsFontPrivate
 
     FontContext * context;
 };
-#endif /* WINDOWSFONTPRIVATE_H_ */
+#endif /* GRAPHICS_PRIVATE_WINDOWS_WINDOWSFONTPRIVATE_H_ */
