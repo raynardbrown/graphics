@@ -13,6 +13,8 @@
 #ifndef GRAPHICS_IDRAWABLE_H_
 #define GRAPHICS_IDRAWABLE_H_
 
+class IDrawableSurface;
+
 class IDrawable
 {
   protected:
@@ -28,5 +30,7 @@ class IDrawable
     {
 
     }
+
+    virtual IDrawableSurface * getDrawableSurface() const = 0;
 };
 #endif /* GRAPHICS_IDRAWABLE_H_ */
