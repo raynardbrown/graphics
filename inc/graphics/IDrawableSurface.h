@@ -13,6 +13,8 @@
 #ifndef GRAPHICS_IDRAWABLESURFACE_H_
 #define GRAPHICS_IDRAWABLESURFACE_H_
 
+class DrawableSurfaceContext;
+
 class IDrawableSurface
 {
   protected:
@@ -31,5 +33,7 @@ class IDrawableSurface
 
     virtual int getWidth() const = 0;
     virtual int getHeight() const = 0;
+
+    virtual DrawableSurfaceContext * getDrawableSurfaceContext() const = 0;
 };
 #endif /* GRAPHICS_IDRAWABLESURFACE_H_ */
