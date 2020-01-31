@@ -13,7 +13,7 @@
 #ifndef GRAPHICS_IDRAWABLESURFACE_H_
 #define GRAPHICS_IDRAWABLESURFACE_H_
 
-class DrawableSurfaceContext;
+struct DrawableSurfaceContext;
 
 class IDrawableSurface
 {
