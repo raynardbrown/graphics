@@ -13,7 +13,9 @@
 #ifndef GRAPHICS_PRIVATE_WINDOWS_SCREENGRAPHICS_H_
 #define GRAPHICS_PRIVATE_WINDOWS_SCREENGRAPHICS_H_
 
-class ScreenGraphics
+#include "graphics/Graphics.h"
+
+class ScreenGraphics : public Graphics
 {
   public:
 
