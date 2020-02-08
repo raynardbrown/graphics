@@ -31,6 +31,7 @@ if (MSVC)
 
     set(Sources_Windows src/graphics/windows/FontFactory.cpp
                         src/graphics/windows/TextDimension.cpp
+                        src/graphics/windows/Win32Graphics.cpp
                         src/graphics/windows/WindowsFont.cpp)
     
     list(APPEND Sources ${Sources_Windows})
