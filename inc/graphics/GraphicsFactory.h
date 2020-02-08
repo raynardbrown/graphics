@@ -13,6 +13,10 @@
 #ifndef GRAPHICS_GRAPHICSFACTORY_H_
 #define GRAPHICS_GRAPHICSFACTORY_H_
 
+#include <memory>
+
+class Graphics;
+
 class GraphicsFactory
 {
   private:
@@ -28,5 +32,7 @@ class GraphicsFactory
     {
 
     }
+
+    static std::auto_ptr<Graphics> getScreenGraphics();
 };
 #endif /* GRAPHICS_GRAPHICSFACTORY_H_ */
