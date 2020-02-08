@@ -15,9 +15,11 @@
 
 #include <windows.h>
 
+#include "graphics/Graphics.h"
+
 class IDrawable;
 
-class SystemGraphics
+class SystemGraphics : public Graphics
 {
   public:
 
