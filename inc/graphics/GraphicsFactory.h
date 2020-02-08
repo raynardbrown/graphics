@@ -16,6 +16,7 @@
 #include <memory>
 
 class Graphics;
+class IDrawable;
 
 class GraphicsFactory
 {
@@ -34,5 +35,7 @@ class GraphicsFactory
     }
 
     static std::auto_ptr<Graphics> getScreenGraphics();
+
+    static std::auto_ptr<Graphics> getGraphics(IDrawable * drawable);
 };
 #endif /* GRAPHICS_GRAPHICSFACTORY_H_ */
