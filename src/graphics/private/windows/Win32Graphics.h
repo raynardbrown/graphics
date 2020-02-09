@@ -41,6 +41,12 @@ class Win32Graphics : public Graphics
      */
     virtual void setTextColor(const Color * textColor);
 
+    void initialize();
+
+    virtual void create();
+
+    virtual void postCreate();
+
   private:
 
     std::auto_ptr<Win32GraphicsPrivate> d;
