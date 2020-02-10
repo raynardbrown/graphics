@@ -43,6 +43,8 @@ class Win32Graphics : public Graphics
 
     void initialize();
 
+  protected:
+
     virtual void create();
 
     virtual void postCreate();
