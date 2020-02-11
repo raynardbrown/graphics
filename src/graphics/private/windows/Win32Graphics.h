@@ -45,7 +45,7 @@ class Win32Graphics : public Graphics
 
   protected:
 
-    virtual void create();
+    virtual void acquire();
 
     virtual void postCreate();
 
