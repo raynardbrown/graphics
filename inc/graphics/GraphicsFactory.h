@@ -13,7 +13,7 @@
 #ifndef GRAPHICS_GRAPHICSFACTORY_H_
 #define GRAPHICS_GRAPHICSFACTORY_H_
 
-#include <memory>
+#include <boost/shared_ptr.hpp>
 
 class Graphics;
 class IDrawable;
@@ -34,8 +34,8 @@ class GraphicsFactory
 
     }
 
-    static std::auto_ptr<Graphics> getScreenGraphics();
+    static boost::shared_ptr<Graphics> getScreenGraphics();
 
-    static std::auto_ptr<Graphics> getGraphics(IDrawable * drawable);
+    static boost::shared_ptr<Graphics> getGraphics(IDrawable * drawable);
 };
 #endif /* GRAPHICS_GRAPHICSFACTORY_H_ */
