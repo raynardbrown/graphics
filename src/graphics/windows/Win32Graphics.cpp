@@ -10,7 +10,12 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
+#include "graphics/IDrawable.h"
+
+#include "graphics/Color.h"
+#include "graphics/IDrawableSurface.h"
 #include "graphics/private/windows/Win32GraphicsPrivate.h"
+#include "graphics/private/windows/DrawableSurfaceContext.h"
 
 #include "graphics/private/windows/Win32Graphics.h"
 
@@ -35,4 +40,11 @@ Win32GraphicsPrivate::Win32GraphicsPrivate(IDrawable * drawable,
  doubleBufferingEnabled(false), // don't use the memory dc the client is supply an HDC
  clientHandle(true)
 {
+}
+
+void Win32Graphics::initialize()
+{
+  create();
+
+  postCreate();
 }
