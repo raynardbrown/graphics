@@ -45,14 +45,14 @@ class Win32Graphics : public Graphics
 
   protected:
 
+    Win32Graphics(Win32GraphicsPrivate &d);
+
     virtual void acquire();
 
     virtual void postAcquire();
 
     virtual void release();
 
-  private:
-
-    std::auto_ptr<Win32GraphicsPrivate> d;
+    std::auto_ptr<Win32GraphicsPrivate> dRoot;
 };
 #endif /* GRAPHICS_PRIVATE_WINDOWS_WIN32GRAPHICS_H_ */
