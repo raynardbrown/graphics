@@ -47,7 +47,7 @@ class Win32Graphics : public Graphics
 
     virtual void acquire();
 
-    virtual void postCreate();
+    virtual void postAcquire();
 
   private:
 
