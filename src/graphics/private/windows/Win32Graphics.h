@@ -49,6 +49,8 @@ class Win32Graphics : public Graphics
 
     virtual void postAcquire();
 
+    virtual void release();
+
   private:
 
     std::auto_ptr<Win32GraphicsPrivate> d;
