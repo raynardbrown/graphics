@@ -44,7 +44,7 @@ Win32GraphicsPrivate::Win32GraphicsPrivate(IDrawable * drawable,
 
 void Win32Graphics::initialize()
 {
-  create();
+  acquire();
 
   postCreate();
 }
