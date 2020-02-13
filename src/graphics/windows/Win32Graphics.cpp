@@ -30,18 +30,6 @@ Win32GraphicsPrivate::Win32GraphicsPrivate(IDrawable * drawable)
 {
 }
 
-Win32GraphicsPrivate::Win32GraphicsPrivate(IDrawable * drawable,
-                                           HDC hdc)
-:drawable(drawable),
- hdc(hdc),
- memoryDC(nullptr),
- compatibleBitmap(nullptr),
- oldBitmap(nullptr),
- doubleBufferingEnabled(false), // don't use the memory dc the client is supply an HDC
- clientHandle(true)
-{
-}
-
 void Win32Graphics::initialize()
 {
   acquire();
