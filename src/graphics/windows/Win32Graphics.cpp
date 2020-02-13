@@ -25,9 +25,9 @@ Win32GraphicsPrivate::Win32GraphicsPrivate(IDrawable * drawable)
  memoryDC(nullptr),
  compatibleBitmap(nullptr),
  oldBitmap(nullptr),
- doubleBufferingEnabled(true),
- clientHandle(false)
+ doubleBufferingEnabled(true)
 {
+
 }
 
 void Win32Graphics::initialize()
