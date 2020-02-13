@@ -30,6 +30,8 @@ class SystemGraphics : public Win32Graphics
 
     virtual ~SystemGraphics();
 
+    virtual void setBackgroundColor(const Color * backgroundColor);
+
   protected:
 
     SystemGraphics(SystemGraphicsPrivate& d);
