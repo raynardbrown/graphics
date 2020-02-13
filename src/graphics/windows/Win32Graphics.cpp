@@ -33,6 +33,28 @@ Win32GraphicsPrivate::Win32GraphicsPrivate(IDrawable * drawable)
 
 }
 
+Win32GraphicsPrivate::~Win32GraphicsPrivate()
+{
+
+}
+
+Win32Graphics::Win32Graphics(IDrawable * drawable)
+:dRoot(new Win32GraphicsPrivate(drawable))
+{
+  dRoot->setBackgroundColorImpl = new Win32GraphicsSetBackgroundColorImpl(this);
+}
+
+Win32Graphics::Win32Graphics(Win32GraphicsPrivate &dRoot)
+:dRoot(&dRoot)
+{
+
+}
+
+Win32Graphics::~Win32Graphics()
+{
+
+}
+
 void Win32Graphics::initialize()
 {
   acquire();
