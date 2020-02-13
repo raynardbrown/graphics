@@ -15,11 +15,12 @@
 
 #include <windows.h>
 
-#include "graphics/Graphics.h"
+#include "graphics/private/windows/Win32Graphics.h"
 
 class IDrawable;
+class SystemGraphicsPrivate;
 
-class SystemGraphics : public Graphics
+class SystemGraphics : public Win32Graphics
 {
   public:
 
@@ -28,5 +29,10 @@ class SystemGraphics : public Graphics
     SystemGraphics(IDrawable * drawable, HDC hdc);
 
     virtual ~SystemGraphics();
+
+  protected:
+
+    SystemGraphics(SystemGraphicsPrivate& d);
+
 };
 #endif /* GRAPHICS_PRIVATE_WINDOWS_SYSTEMGRAPHICS_H_ */
