@@ -16,6 +16,7 @@
 #include <windows.h>
 
 class IDrawable;
+class ISetBackgroundColorImpl;
 
 class Win32GraphicsPrivate
 {
@@ -38,5 +39,7 @@ class Win32GraphicsPrivate
     bool doubleBufferingEnabled;
 
     PAINTSTRUCT ps;
+
+    ISetBackgroundColorImpl * setBackgroundColorImpl;
 };
 #endif /* GRAPHICS_PRIVATE_WINDOWS_WIN32GRAPHICSPRIVATE_H_ */
