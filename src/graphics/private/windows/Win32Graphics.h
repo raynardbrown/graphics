@@ -54,5 +54,9 @@ class Win32Graphics : public Graphics
     virtual void release();
 
     std::auto_ptr<Win32GraphicsPrivate> dRoot;
+
+  private:
+
+    friend class Win32GraphicsSetBackgroundColorImpl;
 };
 #endif /* GRAPHICS_PRIVATE_WINDOWS_WIN32GRAPHICS_H_ */
