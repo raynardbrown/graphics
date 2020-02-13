@@ -60,6 +60,23 @@ void Win32Graphics::setBackgroundColor(const Color * backgroundColor)
   dRoot->setBackgroundColorImpl->setBackgroundColor(backgroundColor);
 }
 
+void Win32Graphics::setTextColor(const Color * textColor)
+{
+  HDC hdc;
+
+  if(dRoot->doubleBufferingEnabled)
+  {
+    // TODO: make sure the memory has been initialized
+    hdc = dRoot->memoryDC;
+  }
+  else
+  {
+    hdc = dRoot->hdc;
+  }
+
+  ::SetTextColor(hdc, textColor->getColorValue());
+}
+
 void Win32Graphics::initialize()
 {
   acquire();
