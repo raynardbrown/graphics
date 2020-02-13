@@ -24,6 +24,8 @@ class ISetBackgroundColorImpl
 
     }
 
+  public:
+
     virtual ~ISetBackgroundColorImpl()
     {
 
