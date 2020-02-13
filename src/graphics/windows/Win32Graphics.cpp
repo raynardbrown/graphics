@@ -46,5 +46,5 @@ void Win32Graphics::initialize()
 {
   acquire();
 
-  postCreate();
+  postAcquire();
 }
