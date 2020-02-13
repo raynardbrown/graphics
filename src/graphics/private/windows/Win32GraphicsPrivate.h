@@ -38,8 +38,5 @@ class Win32GraphicsPrivate
     bool doubleBufferingEnabled;
 
     PAINTSTRUCT ps;
-
-    // The client supplied the HDC. The client is responsible for the HDC.
-    bool clientHandle;
 };
 #endif /* GRAPHICS_PRIVATE_WINDOWS_WIN32GRAPHICSPRIVATE_H_ */
