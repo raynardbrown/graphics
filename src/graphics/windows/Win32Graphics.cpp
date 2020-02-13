@@ -55,6 +55,11 @@ Win32Graphics::~Win32Graphics()
 
 }
 
+void Win32Graphics::setBackgroundColor(const Color * backgroundColor)
+{
+  dRoot->setBackgroundColorImpl->setBackgroundColor(backgroundColor);
+}
+
 void Win32Graphics::initialize()
 {
   acquire();
