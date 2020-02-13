@@ -23,7 +23,6 @@ class Win32GraphicsPrivate
   public:
 
     Win32GraphicsPrivate(IDrawable * drawable);
-    Win32GraphicsPrivate(IDrawable * drawable, HDC hdc);
 
     ~Win32GraphicsPrivate();
 
