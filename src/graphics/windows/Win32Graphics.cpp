@@ -16,6 +16,8 @@
 #include "graphics/IDrawableSurface.h"
 #include "graphics/private/windows/Win32GraphicsPrivate.h"
 #include "graphics/private/windows/DrawableSurfaceContext.h"
+#include "graphics/private/ISetBackgroundColorImpl.h"
+#include "graphics/private/windows/Win32GraphicsSetBackgroundColorImpl.h"
 
 #include "graphics/private/windows/Win32Graphics.h"
 
@@ -25,7 +27,8 @@ Win32GraphicsPrivate::Win32GraphicsPrivate(IDrawable * drawable)
  memoryDC(nullptr),
  compatibleBitmap(nullptr),
  oldBitmap(nullptr),
- doubleBufferingEnabled(true)
+ doubleBufferingEnabled(true),
+ setBackgroundColorImpl(nullptr)
 {
 
 }
