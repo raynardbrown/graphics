@@ -51,7 +51,11 @@ class Win32Graphics : public Graphics
 
     virtual void postAcquire();
 
+  public:
+
     virtual void release();
+
+  protected:
 
     std::auto_ptr<Win32GraphicsPrivate> dRoot;
 
