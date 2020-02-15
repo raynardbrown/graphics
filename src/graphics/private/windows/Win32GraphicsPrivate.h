@@ -24,7 +24,7 @@ class Win32GraphicsPrivate
 
     Win32GraphicsPrivate(IDrawable * drawable);
 
-    ~Win32GraphicsPrivate();
+    virtual ~Win32GraphicsPrivate();
 
     void initialize();
     void destroy();
