@@ -26,8 +26,6 @@ class Win32GraphicsPrivate
 
     virtual ~Win32GraphicsPrivate();
 
-    void initialize();
-    void destroy();
     void setDoubleBufferingEnabled(bool flag);
 
     IDrawable * drawable;
