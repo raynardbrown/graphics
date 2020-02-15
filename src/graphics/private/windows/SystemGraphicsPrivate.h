@@ -13,7 +13,11 @@
 #ifndef GRAPHICS_PRIVATE_WINDOWS_SYSTEMGRAPHICSPRIVATE_H_
 #define GRAPHICS_PRIVATE_WINDOWS_SYSTEMGRAPHICSPRIVATE_H_
 
+#include <windows.h>
+
 #include "graphics/private/windows/Win32GraphicsPrivate.h"
+
+class IDrawable;
 
 class SystemGraphicsPrivate : public Win32GraphicsPrivate
 {
