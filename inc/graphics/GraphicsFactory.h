@@ -22,17 +22,11 @@ class GraphicsFactory
 {
   private:
 
-    GraphicsFactory()
-    {
-
-    }
+    GraphicsFactory();
 
   public:
 
-    ~GraphicsFactory()
-    {
-
-    }
+    ~GraphicsFactory();
 
     static boost::shared_ptr<Graphics> getScreenGraphics();
 
