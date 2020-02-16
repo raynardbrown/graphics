@@ -38,6 +38,8 @@ class SystemGraphics : public Win32Graphics
 
     virtual void acquire();
 
+  public:
+
     virtual void release();
 };
 #endif /* GRAPHICS_PRIVATE_WINDOWS_SYSTEMGRAPHICS_H_ */
