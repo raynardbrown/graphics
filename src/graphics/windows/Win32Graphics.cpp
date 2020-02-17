@@ -134,3 +134,8 @@ void Win32Graphics::acquire()
     dRoot->oldBitmap = static_cast<HBITMAP>(::SelectObject(dRoot->memoryDC, dRoot->compatibleBitmap));
   }
 }
+
+void Win32Graphics::postAcquire()
+{
+
+}
