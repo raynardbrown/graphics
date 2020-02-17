@@ -139,3 +139,15 @@ void Win32Graphics::postAcquire()
 {
 
 }
+
+void Win32Graphics::release()
+{
+  if(dRoot->doubleBufferingEnabled)
+  {
+    ::SelectObject(dRoot->memoryDC, dRoot->oldBitmap);
+    ::DeleteObject(dRoot->compatibleBitmap);
+    ::DeleteDC(dRoot->memoryDC);
+  }
+
+  ::ReleaseDC(dRoot->drawable->getDrawableSurface()->getDrawableSurfaceContext()->hwnd, dRoot->hdc);
+}
