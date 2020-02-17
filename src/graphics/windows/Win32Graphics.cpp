@@ -83,3 +83,54 @@ void Win32Graphics::initialize()
 
   postAcquire();
 }
+
+void Win32Graphics::acquire()
+{
+  HWND localHwnd = nullptr;
+
+  if(dRoot->drawable->getDrawableSurface()->getDrawableSurfaceContext()->hwnd == nullptr)
+  {
+    // draw on the whole screen
+    dRoot->hdc = ::GetDC(nullptr);
+
+    localHwnd = nullptr;
+  }
+  else
+  {
+    // draw on just the drawable surface
+    dRoot->hdc = ::GetDC(dRoot->drawable->getDrawableSurface()->getDrawableSurfaceContext()->hwnd);
+
+    localHwnd = dRoot->drawable->getDrawableSurface()->getDrawableSurfaceContext()->hwnd;
+  }
+
+  if(dRoot->hdc == nullptr)
+  {
+    // TOD: handle null
+  }
+
+  if(dRoot->doubleBufferingEnabled)
+  {
+    dRoot->memoryDC = ::CreateCompatibleDC(dRoot->hdc);
+
+    if(dRoot->memoryDC == nullptr)
+    {
+      ::ReleaseDC(localHwnd, dRoot->hdc);
+
+      // TODO: handle create compatiable dc failure
+    }
+
+    dRoot->compatibleBitmap = ::CreateCompatibleBitmap(dRoot->hdc,
+                                                       dRoot->drawable->getDrawableSurface()->getWidth(),
+                                                       dRoot->drawable->getDrawableSurface()->getHeight());
+
+    if(dRoot->compatibleBitmap == nullptr)
+    {
+      ::DeleteDC(dRoot->memoryDC);
+      ::ReleaseDC(localHwnd, dRoot->hdc);
+
+      // TODO: handle CreateCompatibleBitmap fail
+    }
+
+    dRoot->oldBitmap = static_cast<HBITMAP>(::SelectObject(dRoot->memoryDC, dRoot->compatibleBitmap));
+  }
+}
