@@ -28,10 +28,18 @@ GraphicsFactory::~GraphicsFactory()
 
 /* static */ boost::shared_ptr<Graphics> GraphicsFactory::getScreenGraphics()
 {
-  return boost::shared_ptr<Graphics>(new ScreenGraphics(), GraphicsDeleter());
+  boost::shared_ptr<ScreenGraphics> graphics(new ScreenGraphics(), GraphicsDeleter());
+
+  graphics->initialize();
+
+  return graphics;
 }
 
 /* static */ boost::shared_ptr<Graphics> GraphicsFactory::getGraphics(IDrawable * drawable)
 {
-  return boost::shared_ptr<Graphics>(new Win32Graphics(drawable), GraphicsDeleter());
+  boost::shared_ptr<Win32Graphics> graphics(new Win32Graphics(drawable), GraphicsDeleter());
+
+  graphics->initialize();
+
+  return graphics;
 }
