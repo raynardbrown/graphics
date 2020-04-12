@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 //
-// File: ISetBackgroundColorImpl.h
+// File: IGraphicsImpl.h
 //
 // Author: Raynard Brown
 //
@@ -10,27 +10,27 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#ifndef GRAPHICS_PRIVATE_ISETBACKGROUNDCOLORIMPL_H_
-#define GRAPHICS_PRIVATE_ISETBACKGROUNDCOLORIMPL_H_
+#ifndef GRAPHICS_PRIVATE_IGRAPHICSIMPL_H_
+#define GRAPHICS_PRIVATE_IGRAPHICSIMPL_H_
 
 class Color;
 
-class ISetBackgroundColorImpl
+class IGraphicsImpl
 {
   protected:
 
-    ISetBackgroundColorImpl()
+    IGraphicsImpl()
     {
 
     }
 
   public:
 
-    virtual ~ISetBackgroundColorImpl()
+    virtual ~IGraphicsImpl()
     {
 
     }
 
     virtual void setBackgroundColor(const Color * backgroundColor) = 0;
 };
-#endif /* GRAPHICS_PRIVATE_ISETBACKGROUNDCOLORIMPL_H_ */
+#endif /* GRAPHICS_PRIVATE_IGRAPHICSIMPL_H_ */
