@@ -32,5 +32,7 @@ class IGraphicsImpl
     }
 
     virtual void setBackgroundColor(const Color * backgroundColor) = 0;
+
+    virtual void setTextColor(const Color * textColor) = 0;
 };
 #endif /* GRAPHICS_PRIVATE_IGRAPHICSIMPL_H_ */
