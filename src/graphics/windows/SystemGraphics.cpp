@@ -72,6 +72,20 @@ void SystemGraphics::setBackgroundColor(const Color * backgroundColor)
   }
 }
 
+void SystemGraphics::setTextColor(const Color * textColor)
+{
+  SystemGraphicsPrivate * d = static_cast<SystemGraphicsPrivate *>(dRoot.get());
+
+  if(d->clientHandle)
+  {
+    ::SetTextColor(d->hdc, textColor->getColorValue());
+  }
+  else
+  {
+    d->graphicsImpl->setTextColor(textColor);
+  }
+}
+
 void SystemGraphics::acquire()
 {
   SystemGraphicsPrivate * d = static_cast<SystemGraphicsPrivate *>(dRoot.get());
