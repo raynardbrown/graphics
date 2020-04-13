@@ -17,7 +17,7 @@
 #include "graphics/private/windows/Win32GraphicsPrivate.h"
 #include "graphics/private/windows/DrawableSurfaceContext.h"
 #include "graphics/private/windows/SystemGraphicsPrivate.h"
-#include "graphics/private/ISetBackgroundColorImpl.h"
+#include "graphics/private/IGraphicsImpl.h"
 
 #include "graphics/private/windows/SystemGraphics.h"
 
@@ -68,7 +68,7 @@ void SystemGraphics::setBackgroundColor(const Color * backgroundColor)
   }
   else
   {
-    d->setBackgroundColorImpl->setBackgroundColor(backgroundColor);
+    d->graphicsImpl->setBackgroundColor(backgroundColor);
   }
 }
 
