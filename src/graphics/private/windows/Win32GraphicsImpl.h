@@ -29,6 +29,8 @@ class Win32GraphicsImpl : public IGraphicsImpl
 
     virtual void setBackgroundColor(const Color * backgroundColor);
 
+    virtual void setTextColor(const Color * textColor);
+
   private:
 
     Win32Graphics * win32Graphics;
