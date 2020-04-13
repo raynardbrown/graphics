@@ -65,3 +65,20 @@ void Win32GraphicsImpl::setBackgroundColor(const Color * backgroundColor)
 
   ::DeleteObject(brush);
 }
+
+void Win32GraphicsImpl::setTextColor(const Color * textColor)
+{
+  HDC hdc;
+
+  if(win32Graphics->dRoot->doubleBufferingEnabled)
+  {
+    // TODO: make sure the memory has been initialized
+    hdc = win32Graphics->dRoot->memoryDC;
+  }
+  else
+  {
+    hdc = win32Graphics->dRoot->hdc;
+  }
+
+  ::SetTextColor(hdc, textColor->getColorValue());
+}
