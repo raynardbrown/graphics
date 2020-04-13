@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 //
-// File: Win32GraphicsSetBackgroundColorImpl.h
+// File: Win32GraphicsImpl.h
 //
 // Author: Raynard Brown
 //
@@ -10,22 +10,22 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#ifndef GRAPHICS_PRIVATE_WINDOWS_WIN32GRAPHICSBACKGROUNDCOLORIMPL_H_
-#define GRAPHICS_PRIVATE_WINDOWS_WIN32GRAPHICSBACKGROUNDCOLORIMPL_H_
+#ifndef GRAPHICS_PRIVATE_WINDOWS_WIN32GRAPHICSIMPL_H_
+#define GRAPHICS_PRIVATE_WINDOWS_WIN32GRAPHICSIMPL_H_
 
-#include "graphics/private/ISetBackgroundColorImpl.h"
+#include "graphics/private/IGraphicsImpl.h"
 
 class Color;
 
 class Win32Graphics;
 
-class Win32GraphicsSetBackgroundColorImpl : public ISetBackgroundColorImpl
+class Win32GraphicsImpl : public IGraphicsImpl
 {
   public:
 
-    Win32GraphicsSetBackgroundColorImpl(Win32Graphics * win32Graphics);
+    Win32GraphicsImpl(Win32Graphics * win32Graphics);
 
-    virtual ~Win32GraphicsSetBackgroundColorImpl();
+    virtual ~Win32GraphicsImpl();
 
     virtual void setBackgroundColor(const Color * backgroundColor);
 
@@ -33,4 +33,4 @@ class Win32GraphicsSetBackgroundColorImpl : public ISetBackgroundColorImpl
 
     Win32Graphics * win32Graphics;
 };
-#endif /* GRAPHICS_PRIVATE_WINDOWS_WIN32GRAPHICSBACKGROUNDCOLORIMPL_H_ */
+#endif /* GRAPHICS_PRIVATE_WINDOWS_WIN32GRAPHICSIMPL_H_ */
