@@ -16,8 +16,7 @@
 #include "graphics/IDrawableSurface.h"
 #include "graphics/private/windows/Win32GraphicsPrivate.h"
 #include "graphics/private/windows/DrawableSurfaceContext.h"
-#include "graphics/private/ISetBackgroundColorImpl.h"
-#include "graphics/private/windows/Win32GraphicsSetBackgroundColorImpl.h"
+#include "graphics/private/windows/Win32GraphicsImpl.h"
 
 #include "graphics/private/windows/Win32Graphics.h"
 
@@ -28,7 +27,7 @@ Win32GraphicsPrivate::Win32GraphicsPrivate(IDrawable * drawable)
  compatibleBitmap(nullptr),
  oldBitmap(nullptr),
  doubleBufferingEnabled(true),
- setBackgroundColorImpl(nullptr)
+ graphicsImpl(nullptr)
 {
 
 }
@@ -41,7 +40,7 @@ Win32GraphicsPrivate::~Win32GraphicsPrivate()
 Win32Graphics::Win32Graphics(IDrawable * drawable)
 :dRoot(new Win32GraphicsPrivate(drawable))
 {
-  dRoot->setBackgroundColorImpl = new Win32GraphicsSetBackgroundColorImpl(this);
+  dRoot->graphicsImpl = new Win32GraphicsImpl(this);
 }
 
 Win32Graphics::Win32Graphics(Win32GraphicsPrivate &dRoot)
@@ -57,7 +56,7 @@ Win32Graphics::~Win32Graphics()
 
 void Win32Graphics::setBackgroundColor(const Color * backgroundColor)
 {
-  dRoot->setBackgroundColorImpl->setBackgroundColor(backgroundColor);
+  dRoot->graphicsImpl->setBackgroundColor(backgroundColor);
 }
 
 void Win32Graphics::setTextColor(const Color * textColor)
