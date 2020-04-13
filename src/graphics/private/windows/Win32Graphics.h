@@ -61,6 +61,6 @@ class Win32Graphics : public Graphics
 
   private:
 
-    friend class Win32GraphicsSetBackgroundColorImpl;
+    friend class Win32GraphicsImpl;
 };
 #endif /* GRAPHICS_PRIVATE_WINDOWS_WIN32GRAPHICS_H_ */
