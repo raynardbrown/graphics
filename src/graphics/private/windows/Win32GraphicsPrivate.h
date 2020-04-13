@@ -16,7 +16,7 @@
 #include <windows.h>
 
 class IDrawable;
-class ISetBackgroundColorImpl;
+class IGraphicsImpl;
 
 class Win32GraphicsPrivate
 {
@@ -37,6 +37,6 @@ class Win32GraphicsPrivate
 
     PAINTSTRUCT ps;
 
-    ISetBackgroundColorImpl * setBackgroundColorImpl;
+    IGraphicsImpl * graphicsImpl;
 };
 #endif /* GRAPHICS_PRIVATE_WINDOWS_WIN32GRAPHICSPRIVATE_H_ */
