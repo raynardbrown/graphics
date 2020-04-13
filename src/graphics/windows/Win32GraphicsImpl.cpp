@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 //
-// File: Win32GraphicsSetBackgroundColorImpl.cpp
+// File: Win32GraphicsImpl.cpp
 //
 // Author: Raynard Brown
 //
@@ -19,21 +19,21 @@
 #include "graphics/private/windows/Win32Graphics.h"
 #include "graphics/private/windows/Win32GraphicsPrivate.h"
 
-#include "graphics/private/windows/Win32GraphicsSetBackgroundColorImpl.h"
+#include "graphics/private/windows/Win32GraphicsImpl.h"
 
-Win32GraphicsSetBackgroundColorImpl::Win32GraphicsSetBackgroundColorImpl(Win32Graphics * win32Graphics)
-:ISetBackgroundColorImpl(),
+Win32GraphicsImpl::Win32GraphicsImpl(Win32Graphics * win32Graphics)
+:IGraphicsImpl(),
  win32Graphics(win32Graphics)
 {
 
 }
 
-Win32GraphicsSetBackgroundColorImpl::~Win32GraphicsSetBackgroundColorImpl()
+Win32GraphicsImpl::~Win32GraphicsImpl()
 {
 
 }
 
-void Win32GraphicsSetBackgroundColorImpl::setBackgroundColor(const Color * backgroundColor)
+void Win32GraphicsImpl::setBackgroundColor(const Color * backgroundColor)
 {
   HDC hdc;
 
